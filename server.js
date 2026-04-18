@@ -16,14 +16,14 @@ app.get('/usuario', (req, res) => {
 //rota de criar
 
 app.post('/usuario', async (req, res) => {
-    await prisma.user.create({
+    const user = await prisma.user.create({
         data: {
             name: req.body.name,
             age: req.body.age,
             email: req.body.email
         }
     })
-    res.status(201).json({ message: "Usuário criado com sucesso" })
+    res.status(201).json(user) //retornando usuário criado
 })
 
 app.listen(3000)
