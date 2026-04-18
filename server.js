@@ -23,8 +23,6 @@ app.post('/usuario', (req, res) => {
 })
 
 app.listen(3000)
+ 
+ 
 
-/* 
-mongodb+srv://programador:zmRho64jHp6ujcGn@programador.sambd2y.mongodb.net/?appName=Programador 
-zmRho64jHp6ujcGn
-*/ 
