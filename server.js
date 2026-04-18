@@ -8,8 +8,8 @@ const prisma = new PrismaClient();
 
 //rota de listar, buscar e obter
 
-app.get('/usuario', (req, res) => {
-
+app.get('/usuario', async (req, res) => {
+    const users = await prisma.user.findMany() //findmany procura tudo que tem user e retorna para users
     res.status(200).json(users)
 })
 
