@@ -23,6 +23,3 @@ app.post('/usuario', (req, res) => {
 })
 
 app.listen(3000)
- 
- 
-
