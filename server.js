@@ -40,7 +40,7 @@ app.put('/usuario/:id', async (req, res) => {
             email: req.body.email
         }
     })
-    res.status(201).json(user) //retornando usuário criado
+    res.status(200).json(user) //retornando usuário criado
 })
 
 app.listen(3000)
