@@ -1,8 +1,11 @@
 import express from "express";
 import { PrismaClient } from "./generated/prisma/client.js";
+import cors from 'cors'
 
 const app = express();
-app.use(express.json())
+app.use(express.json());
+app.use(cors()); //habilitar para qualquer front-end acessar
+// app.use(cors('https://devclub.com.br')); para um front específico
 
 const prisma = new PrismaClient();
 
